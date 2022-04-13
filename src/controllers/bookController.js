@@ -27,7 +27,7 @@ const getParticularBooks = async function (req, res) {
     let data = req.body
     let output= await BookModel.find(data)
     res.send({msg: output})
-}//this one is giving problem as i write "isPublished"=false , it is showing me "true" data also
+}//this one is giving problem as i write "isPublished"=false , it is showing me "true"g data also
 
 const getXINRBooks = async function (req, res) {
     // let output= BookModel.find({ {prices: $or: {[indianPrice:}}})
