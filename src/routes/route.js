@@ -7,19 +7,9 @@ router.get("/test-me", function (req, res) {
 })
 
 
-router.post("/createBook", BookController.createBook  )
+router.get("/chetanBhagat",BookController.chetanBhagat  )
 
-router.get("/bookList", BookController.bookList)//problem in this one is && operator is working as ||
 
-router.post("/getBooksInYear", BookController.getBooksInYear)
-
-router.post("/getParticularBooks", BookController.getParticularBooks)
-
-router.post("/getXINRBooks", BookController.getXINRBooks)
-
-router.post("/getRandomBooks", BookController.getRandomBooks)
-
-router.get("/getBooksData", BookController.getBooksData)
 
 
 module.exports = router;
