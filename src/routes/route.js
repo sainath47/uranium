@@ -7,7 +7,12 @@ router.get("/test-me", function (req, res) {
 })
 
 
-router.get("/chetanBhagat",BookController.chetanBhagat  )
+
+router.post("/createNewBook",BookController.createNewBook  )
+router.post("/createNewAuthor",BookController.createNewAuthor  )
+router.get("/allBooks",BookController.allBooks  )
+router.get("/updatedBookPrice",BookController.updatedBookPrice  )
+router.get("/authorName",BookController.authorName )
 
 
 

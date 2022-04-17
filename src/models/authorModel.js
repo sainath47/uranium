@@ -16,7 +16,7 @@ required : true
         , { timestamps: true });
 
       
-      
+      //notation of data easy form to machine to understand
       
       
        
