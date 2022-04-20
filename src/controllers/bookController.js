@@ -1,4 +1,6 @@
 const { count } = require("console")
+const res = require("express/lib/response")
+const { nextTick } = require("process")
 const BookModel= require("../models/bookModel")
 
 const createBook= async function (req, res) {
@@ -42,7 +44,20 @@ const deleteBooks= async function (req, res) {
      res.send( { msg: allBooks})
 }
 
+let mid1= function (res,req,next){
+    console.log("this 1ST MW")
+    next()
+}
 
+let mid2= function (res,req,next){
+    console.log("this 2ND MW")
+    next()
+}
+
+let function1= function (req,res){
+    console.log("this my handler")
+    res.send("sa")
+}
 
 
 // CRUD OPERATIONS:
@@ -53,7 +68,5 @@ const deleteBooks= async function (req, res) {
 
 
 
-module.exports.createBook= createBook
-module.exports.getBooksData= getBooksData
-module.exports.updateBooks= updateBooks
-module.exports.deleteBooks= deleteBooks
+module.exports={ createBook, mid1, mid2, function1}
+
