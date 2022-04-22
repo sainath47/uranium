@@ -106,7 +106,7 @@ const deleteUser = async function (req, res){
     return res.send("No such user exists");
   }
 
-  let userData = req.body;
+  
   let deletedUser = await userModel.findOneAndUpdate({ _id: userId }, {isDeleted:true});
   res.send({ status: deletedUser, data: deletedUser });
 
